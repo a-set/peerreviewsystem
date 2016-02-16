@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="../../assets/ico/favicon.png">
+<title>Instructor Dashboard</title>
+<link
+	href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="css/instructor-dashboard.css" rel="stylesheet">
+<link href="css/share.css" rel="stylesheet">
+<link href="css/bootstrap-clockpicker.min.css" rel="stylesheet">
+<link href="css/datepicker.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="instructor-dashboard.html" target="">Peer Review
+					System</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="instructor-dashboard.html">Home</a></li>
+				</ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome, John (Instructor)! <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">My account</a></li>
+	            <li><a href="#">Help</a></li>
+	            <li class="divider"></li>
+	            <li><a href="index.html">Log out</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<div class="container">
+		<div class="page-header">
+			<h3>Instructor Dashboard</h3>
+		</div>
+		<div class="row" id="area-main-tools">
+			<div class="col-md-5">
+				<select class="form-control input-lg">
+				  <option>INF 231 - User Interface Design and Evaluation</option>
+				  <option>INF 233 - Knowledge Base User Interface</option>
+				  <option>INF 241 - Introduction to Ubiquitous Computing</option>
+				</select>
+			</div>
+			<div class="col-md-4 col-md-offset-3">
+				<a href="instructor-new-assignment.html" class="btn btn-primary btn-lg active"
+					 id="btn-new-assignment" role="button">
+					<span	class="glyphicon glyphicon-plus-sign"></span>
+					Create new assignment
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-primary" id="assignment-0">
+				<div class="panel-heading">
+					<div class="panel-top-bar">
+						<a class="black">
+							<h3 class="panel-title zone-instructor-toggle" title="Show/Hide the assignment details" style="cursor: pointer">
+								<span class="glyphicon glyphicon-plus toggle-icon"></span>
+								<span class="assignment-title-static">Homework 3 - Paper Summary</span>
+								<div class="col-md-10 assignment-title-form hide">
+										<input type="text" class="form-control input-lg" placeholder="Title of the assignment">
+								</div>
+							</h3>
+						</a>
+						<div class="panel-icon-group">
+							<a class="black"><span class="glyphicon glyphicon-pencil function-icon" title="Edit this assignment" id="0" 
+								 style="cursor: pointer"></span></a>
+							<span class="glyphicon glyphicon-download-alt function-icon grey"
+								 title="Download Sumiitted Assignments" id="0"></span>
+							<span	class="glyphicon glyphicon-export function-icon grey"
+										title="Export peer grade data" id="0"></span>
+						</div>
+					</div>
+					<form action="">
+						<table id="assignment-main-desc" class="table">
+							<tbody>
+								<tr class="assignment-timeline">
+									<td style="width:30%;">
+										<div class="circleBase circleType1"></div>
+										<div class="lineBase lineType1"></div>
+										<div class="lineBase lineType1"></div>
+									</td>
+									<td style="width:30%;">
+										<div class="circleBase circleType1"></div>
+										<div class="lineBase lineType1"></div>
+										<div class="lineBase lineType1"></div>
+									</td>
+									<td style="width:30%;">
+										<div class="circleBase circleType1"></div>
+										<div class="lineBase lineType1"></div>
+										<div class="lineBase lineType1"></div>
+									</td>
+									<td style="width:10%;">
+										<div class="circleBase circleType1"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>Released at:</label>
+										<br>
+										<span class="release_date_0">February 28, 2015 09:00 AM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="realease_date_picker_0">
+												<input class="form-control span2 rdp0" size="16" type="text">
+												<span class="add-on"><i class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 rcp0"
+												data-autoclose="true" id="realease_clock_picker_0">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon"> <span
+													class="glyphicon glyphicon-time"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Submitted at:</label>
+										<br>
+										<span class="submission_date_0">March 12, 2015, 2014 11:59 PM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="submission_date_picker_0">
+												<input class="form-control span2 sdp0" size="16" type="text">
+												<span class="add-on"><i class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 scp0"
+												data-autoclose="true" id="submission_clock_picker_0">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-time"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Review by:</label>
+										<br>
+										<span class="grading_date_0">March 15, 2015 11:59 PM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="grading_date_picker_0">
+												<input class="form-control span2 gdp0" size="16" type="text">
+												<span class="add-on"><i class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 gcp0"
+												data-autoclose="true" id="grading_clock_picker_0">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon"> <span
+													class="glyphicon glyphicon-time"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Finished</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+				<div class="panel-body assignment-body" id="assignment-body-0" hidden="hidden">
+					<table class="table assignment-body-desc">
+						<tbody>
+							<tr>
+								<td class="assignment-detail-label">
+									<label>Maximum score:</label>
+								</td>
+								<td>
+									<span class="max-score-static">100</span>
+									<div class="col-md-2 max-score-form hide">
+											<input type="text" class="form-control" placeholder="Maximum score">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Number of peer graders:</label></td>
+								<td>
+									<span class="peer-graders-number-static">3</span>
+									<div class="col-md-2 peer-graders-number-form hide">
+										<select class="form-control">
+										  <option>1</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Assignment instructions:</label></td>
+								<td>
+									<span class="instructions-static">Give examples of future HCI techniques/technologies.<br>Justify the answer.</span>
+									<div class="col-md-8 instructions-form hide">
+										<textarea class="form-control" rows="5"></textarea>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Review guidelines:</label></td>
+								<td>
+									<span class="guidelines-static">If there are 1 example, minus 10 points.<br>If there are 2 - 3 examples, minus 5 points.<br>Other than this, give the score based from their reasons.</span>
+									<div class="col-md-8 guidelines-form hide">
+										<textarea class="form-control" rows="5"></textarea>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row submit-button-zone">
+						<div align="center" id="submitTable-0" class="col-md-4 col-md-offset-4"></div>
+						<div class="col-md-4" align="right">
+							<button type="button" class="btn btn-link btn-delete-assignment" style="display:none;" data-toggle="modal" data-target="#deleteConfirmModal_0">(Delete this assignment)</button>
+						</div>
+
+						<div class="modal fade" id="deleteConfirmModal_0" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModal_0" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						        <h4 class="modal-title">Do you want to permanently delete "Homework 3 - Paper Summary"?</h4>
+						      </div>
+						      <div class="modal-body">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Keep it</button>
+						        <div style="display:inline-block;width:40px;"></div>
+						        <button type="button" class="btn btn-danger btn-permanetly-delete-assignment">Delete</button>
+						      </div>
+						    </div><!-- /.modal-content -->
+						  </div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+					</div>
+				</div>
+			</div>
+		</div>
+    <div class="row">
+      <div class="panel panel-primary" id="assignment-2">
+        <div class="panel-heading">
+          <div class="panel-top-bar">
+            <a class="black">
+              <h3 class="panel-title zone-instructor-toggle" title="Show/Hide the assignment details" style="cursor: pointer">
+                <span class="glyphicon glyphicon-plus toggle-icon"></span>
+                <span class="assignment-title-static">Midterm Exam</span>
+                <div class="col-md-10 assignment-title-form hide">
+                    <input type="text" class="form-control input-lg" placeholder="Title of the assignment">
+                </div>
+              </h3>
+            </a>
+            <div class="panel-icon-group">
+              <a class="black"><span class="glyphicon glyphicon-pencil function-icon" title="Edit this assignment" id="2" 
+                 style="cursor: pointer"></span></a>
+              <span class="glyphicon glyphicon-download-alt function-icon grey"
+                 title="Download Sumiitted Assignments" id="2"></span>
+              <span class="glyphicon glyphicon-export function-icon grey"
+                    title="Export peer grade data" id="2"></span>
+            </div>
+          </div>
+          <form action="">
+            <table id="assignment-main-desc" class="table">
+              <tbody>
+                <tr class="assignment-timeline">
+                  <td style="width:30%;">
+                    <div class="circleBase circleType2"></div>
+                    <div class="lineBase lineType2"></div>
+                    <div class="lineBase lineType1"></div>
+                  </td>
+                  <td style="width:30%;">
+                    <div class="circleBase circleType1"></div>
+                    <div class="lineBase lineType1"></div>
+                    <div class="lineBase lineType1"></div>
+                  </td>
+                  <td style="width:30%;">
+                    <div class="circleBase circleType1"></div>
+                    <div class="lineBase lineType1"></div>
+                    <div class="lineBase lineType1"></div>
+                  </td>
+                  <td style="width:10%;">
+                    <div class="circleBase circleType1"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Released at:</label>
+                    <br>
+                    <span class="release_date_2">February 23, 2015 06:00 AM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="realease_date_picker_2">
+                        <input class="form-control span2 rdp2" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 rcp2"
+                        data-autoclose="true" id="realease_clock_picker_2">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon"> <span
+                          class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Submitted at:</label>
+                    <br>
+                    <span class="submission_date_2">February 28, 2015 11:59 PM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="submission_date_picker_2">
+                        <input class="form-control span2 sdp2" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 scp2"
+                        data-autoclose="true" id="submission_clock_picker_2">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Review by:</label>
+                    <br>
+                    <span class="grading_date_2">March 10, 2015 11:59 PM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="grading_date_picker_2">
+                        <input class="form-control span2 gdp2" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 gcp2"
+                        data-autoclose="true" id="grading_clock_picker_2">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon"> <span
+                          class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Finished</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <div class="panel-body assignment-body" id="assignment-body-2" hidden="hidden">
+          <table class="table assignment-body-desc">
+            <tbody>
+              <tr>
+                <td class="assignment-detail-label">
+                  <label>Maximum score:</label>
+                </td>
+                <td>
+                  <span class="max-score-static">100</span>
+                  <div class="col-md-2 max-score-form hide">
+                      <input type="text" class="form-control" placeholder="Maximum score">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Number of peer graders:</label></td>
+                <td>
+                  <span class="peer-graders-number-static">3</span>
+                  <div class="col-md-2 peer-graders-number-form hide">
+                    <select class="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Assignment instructions:</label></td>
+                <td>
+                  <span class="instructions-static">Give examples of future HCI techniques/technologies.<br>Justify the answer.</span>
+                  <div class="col-md-8 instructions-form hide">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Review guidelines:</label></td>
+                <td>
+                  <span class="guidelines-static">If there are 1 example, minus 10 points.<br>If there are 2 - 3 examples, minus 5 points.<br>Other than this, give the score based from their reasons.</span>
+                  <div class="col-md-8 guidelines-form hide">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row submit-button-zone">
+            <div align="center" id="submitTable-2" class="col-md-4 col-md-offset-4"></div>
+            <div class="col-md-4" align="right">
+              <button type="button" class="btn btn-link btn-delete-assignment" style="display:none;" data-toggle="modal" data-target="#deleteConfirmModal_2">(Delete this assignment)</button>
+            </div>
+
+            <div class="modal fade" id="deleteConfirmModal_2" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModal_2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Do you want to permanently delete "Midterm Exam"?</h4>
+                  </div>
+                  <div class="modal-body">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Keep it</button>
+                    <div style="display:inline-block;width:40px;"></div>
+                    <button type="button" class="btn btn-danger btn-permanetly-delete-assignment">Delete</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="panel panel-primary" id="assignment-3">
+        <div class="panel-heading">
+          <div class="panel-top-bar">
+            <a class="black">
+              <h3 class="panel-title zone-instructor-toggle" title="Show/Hide the assignment details" style="cursor: pointer">
+                <span class="glyphicon glyphicon-plus toggle-icon"></span>
+                <span class="assignment-title-static">Homework 2 - Fitts's law</span>
+                <div class="col-md-10 assignment-title-form hide">
+                    <input type="text" class="form-control input-lg" placeholder="Title of the assignment">
+                </div>
+              </h3>
+            </a>
+            <div class="panel-icon-group">
+              <a class="black"><span class="glyphicon glyphicon-pencil function-icon" title="Edit this assignment" id="3" 
+                 style="cursor: pointer"></span></a>
+              <a class="black" href="files/assignments.zip"><span class="glyphicon glyphicon-download-alt function-icon"
+                 title="Download Sumiitted Assignments" id="3"></span></a>
+              <span class="glyphicon glyphicon-export function-icon grey"
+                    title="Export peer grade data" id="3"></span>
+            </div>
+          </div>
+          <form action="">
+            <table id="assignment-main-desc" class="table">
+              <tbody>
+                <tr class="assignment-timeline">
+                  <td style="width:30%;">
+                    <div class="circleBase circleType2"></div>
+                    <div class="lineBase lineType2"></div>
+                    <div class="lineBase lineType2"></div>
+                  </td>
+                  <td style="width:30%;">
+                    <div class="circleBase circleType2"></div>
+                    <div class="lineBase lineType2"></div>
+                    <div class="lineBase lineType1"></div>
+                  </td>
+                  <td style="width:30%;">
+                    <div class="circleBase circleType1"></div>
+                    <div class="lineBase lineType1"></div>
+                    <div class="lineBase lineType1"></div>
+                  </td>
+                  <td style="width:10%;">
+                    <div class="circleBase circleType1"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Released at:</label>
+                    <br>
+                    <span class="release_date_3">February 10, 2015 06:00 AM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="realease_date_picker_3">
+                        <input class="form-control span2 rdp3" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 rcp3"
+                        data-autoclose="true" id="realease_clock_picker_3">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon"> <span
+                          class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Submitted at:</label>
+                    <br>
+                    <span class="submission_date_3">February 20, 2015 11:59 PM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="submission_date_picker_3">
+                        <input class="form-control span2 sdp3" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 scp3"
+                        data-autoclose="true" id="submission_clock_picker_3">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Review by:</label>
+                    <br>
+                    <span class="grading_date_3">February 28, 2015 11:59 PM</span>
+                    <span>
+                      <div class="hide input-append date col-lg-6"
+                        data-date-format="mm-dd-yyyy" id="grading_date_picker_3">
+                        <input class="form-control span2 gdp3" size="16" type="text">
+                        <span class="add-on"><i class="icon-th"></i></span>
+                      </div>
+                      <div class="hide input-group clockpicker col-lg-6 gcp3"
+                        data-autoclose="true" id="grading_clock_picker_3">
+                        <input type="text" class="form-control span2 clock-value">
+                        <span class="input-group-addon"> <span
+                          class="glyphicon glyphicon-time"></span>
+                        </span>
+                      </div>
+                    </span>
+                  </td>
+                  <td>
+                    <label>Finished</label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <div class="panel-body assignment-body" id="assignment-body-3" hidden="hidden">
+          <table class="table assignment-body-desc">
+            <tbody>
+              <tr>
+                <td class="assignment-detail-label">
+                  <label>Maximum score:</label>
+                </td>
+                <td>
+                  <span class="max-score-static">100</span>
+                  <div class="col-md-2 max-score-form hide">
+                      <input type="text" class="form-control" placeholder="Maximum score">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Number of peer graders:</label></td>
+                <td>
+                  <span class="peer-graders-number-static">3</span>
+                  <div class="col-md-2 peer-graders-number-form hide">
+                    <select class="form-control">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Assignment instructions:</label></td>
+                <td>
+                  <span class="instructions-static">Give examples of future HCI techniques/technologies.<br>Justify the answer.</span>
+                  <div class="col-md-8 instructions-form hide">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Review guidelines:</label></td>
+                <td>
+                  <span class="guidelines-static">If there are 1 example, minus 10 points.<br>If there are 2 - 3 examples, minus 5 points.<br>Other than this, give the score based from their reasons.</span>
+                  <div class="col-md-8 guidelines-form hide">
+                    <textarea class="form-control" rows="5"></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row submit-button-zone">
+            <div align="center" id="submitTable-3" class="col-md-4 col-md-offset-4"></div>
+            <div class="col-md-4" align="right">
+              <button type="button" class="btn btn-link btn-delete-assignment" style="display:none;" data-toggle="modal" data-target="#deleteConfirmModal_3">(Delete this assignment)</button>
+            </div>
+
+            <div class="modal fade" id="deleteConfirmModal_3" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModal_3" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Do you want to permanently delete "Homework 2 - Fitts's law"?</h4>
+                  </div>
+                  <div class="modal-body">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Keep it</button>
+                    <div style="display:inline-block;width:40px;"></div>
+                    <button type="button" class="btn btn-danger btn-permanetly-delete-assignment">Delete</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+          </div>
+        </div>
+      </div>
+    </div>
+		<div class="row">
+			<div class="panel panel-primary" id="assignment-4">
+				<div class="panel-heading">
+					<div class="panel-top-bar">
+						<a class="black">
+							<h3 class="panel-title zone-instructor-toggle" title="Show/Hide the assignment details" style="cursor: pointer">
+								<span class="glyphicon glyphicon-plus toggle-icon"></span>
+								<span class="assignment-title-static">Homework 1 - HCI Principle</span>
+								<div class="col-md-10 assignment-title-form hide">
+										<input type="text" class="form-control input-lg" placeholder="Title of the assignment">
+								</div>
+							</h3>
+						</a>
+						<div class="panel-icon-group">
+							<a class="black"><span class="glyphicon glyphicon-pencil function-icon" title="Edit this assignment" id="4" 
+								 style="cursor: pointer"></span></a>
+							<a class="black" href="files/assignments.zip"><span class="glyphicon glyphicon-download-alt function-icon"
+								 title="Download Sumiitted Assignments" id="4"></span></a>
+							<a class="black" href="files/peer-grades.csv"><span	class="glyphicon glyphicon-export function-icon"
+								 title="Export peer grade data" id="4"></span></a>
+						</div>
+					</div>
+					<form action="">
+						<table id="assignment-main-desc" class="table">
+							<tbody>
+								<tr class="assignment-timeline">
+									<td style="width:30%;">
+										<div class="circleBase circleType2"></div>
+										<div class="lineBase lineType2"></div>
+										<div class="lineBase lineType2"></div>
+									</td>
+									<td style="width:30%;">
+										<div class="circleBase circleType2"></div>
+										<div class="lineBase lineType2"></div>
+										<div class="lineBase lineType2"></div>
+									</td>
+									<td style="width:30%;">
+										<div class="circleBase circleType2"></div>
+										<div class="lineBase lineType2"></div>
+										<div class="lineBase lineType2"></div>
+									</td>
+									<td style="width:10%;">
+										<div class="circleBase circleType2"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label>Released at:</label>
+										<br>
+										<span class="release_date_4">January 15, 2015 06:00 PM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="realease_date_picker_4">
+												<input class="form-control span2 rdp4" size="16" type="text">
+												<span class="add-on"><i class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 rcp4"
+												data-autoclose="true" id="realease_clock_picker_4">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-time"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Submitted by:</label>
+										<br>
+										<span class="submission_date_4">January 25, 2015 09:00 PM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="submission_date_picker_4">
+												<input class="form-control span2 sdp4" size="16" type="text">
+												<span class="add-on"><i	class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 scp4"
+												data-autoclose="true" id="submission_clock_picker_4">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-time"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Reviewed at:</label>
+										<br>
+										<span class="grading_date_4"> January 30, 2015 09:00 PM</span>
+										<span>
+											<div class="hide input-append date col-lg-6"
+												data-date-format="mm-dd-yyyy" id="grading_date_picker_4">
+												<input class="form-control span2 gdp4" size="16" type="text">
+												<span class="add-on"><i class="icon-th"></i></span>
+											</div>
+											<div class="hide input-group clockpicker col-lg-6 gcp4"
+												data-autoclose="true" id="grading_clock_picker_4">
+												<input type="text" class="form-control span2 clock-value">
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-time gcp1"></span>
+												</span>
+											</div>
+										</span>
+									</td>
+									<td>
+										<label>Finished</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+				</div>
+				<div class="panel-body assignment-body" id="assignment-body-4" hidden="hidden">
+					<table class="table assignment-body-desc">
+						<tbody>
+							<tr>
+								<td class="assignment-detail-label">
+									<label>Maximum score:</label>
+								</td>
+								<td>
+									<span class="max-score-static">100</span>
+									<div class="col-md-2 max-score-form hide">
+											<input type="text" class="form-control" placeholder="Maximum score">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Number of peer graders:</label></td>
+								<td>
+									<span class="peer-graders-number-static">5</span>
+									<div class="col-md-2 peer-graders-number-form hide">
+										<select class="form-control">
+										  <option>1</option>
+										  <option>2</option>
+										  <option>3</option>
+										  <option>4</option>
+										  <option>5</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Assignment instructions:</label></td>
+								<td>
+									<span class="instructions-static">You have to state the process for any usability testing.<br>Justify your answer.</span>
+									<div class="col-md-8 instructions-form hide">
+										<textarea class="form-control" rows="5"></textarea>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Review guidelines:</label></td>
+								<td>
+									<span class="guidelines-static">For students who state the cognitive walkthrough, you should give a full score.<br>Otherwise, zero points.</span>
+									<div class="col-md-8 guidelines-form hide">
+										<textarea class="form-control" rows="5"></textarea>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row submit-button-zone">
+						<div align="center" id="submitTable-4" class="col-md-4 col-md-offset-4"></div>
+						<div class="col-md-4" align="right">
+							<button type="button" class="btn btn-link btn-delete-assignment" style="display:none;" data-toggle="modal" data-target="#deleteConfirmModal_4">(Delete this assignment)</button>
+						</div>
+
+						<div class="modal fade" id="deleteConfirmModal_4" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModal_4" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						        <h4 class="modal-title">Do you want to permanently delete "Homework 1 - HCI Principle"?</h4>
+						      </div>
+						      <div class="modal-body">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Keep it</button>
+						        <div style="display:inline-block;width:40px;"></div>
+						        <button type="button" class="btn btn-danger btn-permanetly-delete-assignment">Delete</button>
+						      </div>
+						    </div><!-- /.modal-content -->
+						  </div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+	<footer class="web-footer">
+		<hr>
+		<p class="text-center">© 2014 Peer Review Grading System</p>
+	</footer>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script
+		src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="js/instructor-dashboard.js"></script>
+	<script src="js/bootstrap-clockpicker.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+</body>
+
+</html>
